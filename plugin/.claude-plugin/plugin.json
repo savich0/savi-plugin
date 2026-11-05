@@ -1,0 +1,7 @@
+{
+  "name": "savi-intake",
+  "version": "0.1.0",
+  "description": "Bring a legal matter to Savi Firm. Runs the firm's intake interview in your own Claude and sends it to the right attorney.",
+  "author": { "name": "Savi Firm" },
+  "keywords": ["legal", "intake", "startup", "venture"]
+}

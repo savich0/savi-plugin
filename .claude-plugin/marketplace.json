@@ -1,0 +1,14 @@
+{
+  "name": "savi-client",
+  "description": "Savi Firm's client-side tools: bring a legal matter to the firm from your own Claude.",
+  "owner": {
+    "name": "Savi Firm"
+  },
+  "plugins": [
+    {
+      "name": "savi-intake",
+      "source": "./plugin",
+      "description": "Bring a legal matter to Savi Firm from your own Claude."
+    }
+  ]
+}
