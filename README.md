@@ -11,6 +11,9 @@ gathered to the Savi Firm attorney for that kind of matter.
 
 ```
 /plugin marketplace add savich0/savi-plugin
+```
+
+```
 /plugin install savi-intake@savi-client
 ```
 
@@ -18,13 +21,16 @@ Then ask for Savi Firm's help, or describe what you need.
 
 ## Connecting to the firm
 
-The plugin talks to the firm's server. If the firm gave you an address or a
-token, set them before starting Claude:
+The plugin talks to Savi Firm's server, which is what delivers your intake to
+an attorney. When you enable the plugin, Claude asks for two settings:
 
-```bash
-export SAVI_MCP_URL="https://<address the firm gave you>/mcp"
-export SAVI_MCP_TOKEN="<token the firm gave you>"
-```
+- **Savi Firm server address**: the https address the firm gave you, ending
+  in `/mcp`.
+- **Savi Firm access token**: the token the firm gave you, if any. It is
+  stored in your system's secure storage, not in a settings file.
+
+Without the server address the plugin cannot send anything to the firm, and it
+will tell you so instead of running the interview.
 
 ## What is sent, and what is not
 
@@ -34,6 +40,8 @@ export SAVI_MCP_TOKEN="<token the firm gave you>"
 - Not sent: the attachments themselves. They stay in your conversation; the
   attorney may ask you for the originals.
 - Never sent: Social Security numbers, bank details or passwords.
+- Where it goes: only to the Savi Firm server address you set. The plugin
+  sends nothing anywhere else and runs no programs on your computer.
 
 Using this plugin does not create an attorney-client relationship, and nothing
 in it is legal advice. A relationship begins only when Savi Firm clears

@@ -2,9 +2,9 @@
   "mcpServers": {
     "savi": {
       "type": "http",
-      "url": "${SAVI_MCP_URL:-http://localhost:3000/mcp}",
+      "url": "${user_config.server_url}",
       "headers": {
-        "Authorization": "Bearer ${SAVI_MCP_TOKEN:-}"
+        "Authorization": "Bearer ${user_config.token}"
       }
     }
   }

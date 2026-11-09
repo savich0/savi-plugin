@@ -1,7 +1,25 @@
 {
   "name": "savi-intake",
+  "displayName": "Savi Firm Intake",
   "version": "0.1.0",
   "description": "Bring a legal matter to Savi Firm. Runs the firm's intake interview in your own Claude and sends it to the right attorney.",
   "author": { "name": "Savi Firm" },
-  "keywords": ["legal", "intake", "startup", "venture"]
+  "homepage": "https://github.com/savich0/savi-plugin",
+  "repository": "https://github.com/savich0/savi-plugin",
+  "license": "MIT",
+  "keywords": ["legal", "intake", "startup", "venture"],
+  "userConfig": {
+    "server_url": {
+      "type": "string",
+      "title": "Savi Firm server address",
+      "description": "The https address Savi Firm gave you, ending in /mcp. Without it the interview cannot be sent to the firm.",
+      "required": true
+    },
+    "token": {
+      "type": "string",
+      "title": "Savi Firm access token",
+      "description": "The token Savi Firm gave you, if any. Leave blank if you were not given one.",
+      "sensitive": true
+    }
+  }
 }
